@@ -1,0 +1,35 @@
+run_name: Combinatorics_test
+
+iterations: 1
+
+dataset_params:
+  type: CombinatoricsToy
+
+  n_mc: 1000000
+  top_mu: 10
+  top_sigma: 2
+  W_mu: 5
+  W_sigma: 3
+
+  n_data: 1000000
+  data_mu: 5
+  data_sigma: 4
+
+  detector_sigma: 6
+  detector_mu: 0
+
+cfm_params:
+  hidden_layers: 5
+  internal_size: 128
+  lr: 1.e-3
+  n_epochs: 100
+  batch_size: 1024
+  batch_size_sample: 10000
+
+classifier_params:
+  hidden_layers: 4
+  internal_size: 64
+  lr: 1.e-4
+  n_epochs: 10
+  batch_size: 128
+  batch_size_sample: 10000

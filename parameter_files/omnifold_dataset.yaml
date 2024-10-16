@@ -1,0 +1,28 @@
+run_name: Omnifold_transfered_CFM
+
+iterations: 10
+background_classifier: False
+efficiency_classifier: False
+
+dataset_params:
+  type: Omnifold
+  path: /Users/huetsch/Desktop/data/Omnifold.npz
+  path2: /remote/gpu07/huetsch/data/omnifold_data/Omnifold.npz
+  n_data: 1000000
+
+cfm_params:
+  model: CFM
+  hidden_layers: 5
+  internal_size: 128
+  lr: 1.e-3
+  n_epochs: 200
+  batch_size: 1024
+  batch_size_sample: 1024
+
+classifier_params:
+  hidden_layers: 4
+  internal_size: 64
+  lr: 1.e-4
+  n_epochs: 50
+  batch_size: 128
+  batch_size_sample: 1024

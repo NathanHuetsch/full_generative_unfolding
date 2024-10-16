@@ -1,0 +1,54 @@
+run_name: PaperSetup_noBG_cutRec2
+
+iterations: 7
+background_classifier: False
+efficiency_classifier: True
+
+dataset_params:
+  n_dim : 1
+
+  type: GaussianToy
+  n_mc: 100000
+  mc_mu: 0
+  mc_sigma: 1
+
+  n_data: 100000
+  data_mu: 0.2
+  data_sigma: 0.8
+
+  detector_mu: 0
+  detector_sigma: 0.5
+
+  n_background: 0
+  background_mu: 0
+  background_sigma: 1.2
+
+  mc_rec_cut: True
+  mc_rec_cut_position: [2,100]
+
+  data_rec_cut: True
+  data_rec_cut_position: [2,100]
+
+  mc_gen_cut: False
+  mc_gen_cut_position: [3,4]
+
+  data_gen_cut: False
+  data_gen_cut_position: [3,6]
+
+
+cfm_params:
+  model: CFM
+  hidden_layers: 4
+  internal_size: 40
+  lr: 1.e-3
+  n_epochs: 100
+  batch_size: 512
+  batch_size_sample: 5000
+
+classifier_params:
+  hidden_layers: 4
+  internal_size: 64
+  lr: 1.e-4
+  n_epochs: 30
+  batch_size: 128
+  batch_size_sample: 2000
